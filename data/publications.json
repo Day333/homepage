@@ -4,8 +4,8 @@
     "authors": "Yuqi Li*, <strong>Kuiye Ding*</strong>, Chuanguang Yang, Szu-Yu Chen, Yingli Tian",
     "venue": "IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP 2026)",
     "year": "2026",
-    "highlight": "CCF-B · * Equal contribution",
-    "thumbnail": "assets/publications/placeholder/paper-thumb.png",
+    "highlight": "CCF-B · Core B * Equal contribution",
+    "thumbnail": "assets/DistilTS.jpg",
     "tags": []
   },
   {
@@ -13,8 +13,8 @@
     "authors": "<strong>Kuiye Ding</strong>, Fanda Fan, Chunyi Hou, Zheya Wang, Lei Wang, Zhengxin Yang, Jianfeng Zhan",
     "venue": "AAAI Conference on Artificial Intelligence (AAAI)",
     "year": "2026",
-    "highlight": "CCF-A · Core A · EI",
-    "thumbnail": "assets/publications/placeholder/paper-thumb.png",
+    "highlight": "CCF-A · Core A* · EI",
+    "thumbnail": "assets/TimeMosaic.jpg",
     "tags": [
       { "text": "Paper", "link": "https://arxiv.org/abs/2509.19406" }
     ]
@@ -24,8 +24,8 @@
     "authors": "<strong>Kuiye Ding</strong>, Fanda Fan, Yao Wang, Ruijie Jian, Xiaorui Wang, Luqi Gong, Yishan Jiang, Chunjie Luo, Jianfeng Zhan",
     "venue": "ACM International Conference on Multimedia (ACM MM)",
     "year": "2025",
-    "highlight": "CCF-A · Core A · EI",
-    "thumbnail": "assets/publications/placeholder/paper-thumb.png",
+    "highlight": "CCF-A · Core A* · EI",
+    "thumbnail": "assets/DualSG.png",
     "tags": [
       { "text": "Paper", "link": "https://dl.acm.org/doi/10.1145/3746027.3755458" }
     ]
