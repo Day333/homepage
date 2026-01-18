@@ -7,7 +7,7 @@
     "highlight": "CCF-B · * Equal contribution",
     "thumbnail": "assets/publications/placeholder/paper-thumb.png",
     "tags": []
-  }
+  },
   {
     "title": "TimeMosaic: Information-Density Guided Time Series Forecasting via Adaptive Granularity Patch and Segment-wise Decoding",
     "authors": "<strong>Kuiye Ding</strong>, Fanda Fan, Chunyi Hou, Zheya Wang, Lei Wang, Zhengxin Yang, Jianfeng Zhan",
@@ -29,5 +29,5 @@
     "tags": [
       { "text": "Paper", "link": "https://dl.acm.org/doi/10.1145/3746027.3755458" }
     ]
-  },
+  }
 ]
