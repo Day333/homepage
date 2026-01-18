@@ -1,14 +1,14 @@
 [
   {
-    "date": "2025-01-01",
-    "content": "Welcome to my new academic homepage! This template is available on GitHub.",
-    "links": [
-        { "text": "GitHub", "url": "https://github.com/yihangtao/AcaNova-X" }
-    ]
+    "date": "2026-01-18",
+    "content": "Our paper titled \"Distilling Time Series Foundation Models for Efficient Forecasting\" has been accepted to ICASSP 2026.",
+    "links": []
   },
   {
-     "date": "2024-12-15",
-     "content": "One paper titled 'A Novel Approach to AI' was accepted to CVPR 2025!",
-     "links": []
+    "date": "2026-01-18",
+    "content": "I have created and launched my academic homepage.",
+    "links": [
+      { "text": "Homepage", "url": "https://day333.github.io/dky/index.html" }
+    ]
   }
 ]
