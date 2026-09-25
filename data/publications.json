@@ -1,5 +1,17 @@
 [
   {
+    "title": "Multivariate Time Series Forecasting needs Cross Variable Loss",
+    "authors": "<strong>Kuiye Ding</strong>, Yifan Hu, Hanchen Wang, Hao Xue",
+    "venue": "Conference on Neural Information Processing Systems (NeurIPS)",
+    "year": "2026",
+    "highlight": "CCF-A · Core A*",
+    "thumbnail": "assets/CvLoss.png",
+    "tags": [
+      { "text": "Paper", "link": "https://arxiv.org/abs/2608.05742" },
+      { "text": "Code", "link": "https://github.com/Day333/CvLoss" }
+    ]
+  },
+  {
     "title": "Distilling Time Series Foundation Models for Efficient Forecasting",
     "authors": "Yuqi Li*, <strong>Kuiye Ding*</strong>, Chuanguang Yang, Szu-Yu Chen, Yingli Tian",
     "venue": "IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP 2026)",
