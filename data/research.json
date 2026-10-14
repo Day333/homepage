@@ -1,0 +1,112 @@
+{
+  "scholar": "https://scholar.google.com/citations?user=OL19JdwAAAAJ&hl=en",
+  "areas": [
+    {
+      "id": "time-series",
+      "title": "Time Series",
+      "eyebrow": "Forecasting & temporal learning",
+      "description": "Forecasting methods, learning objectives, efficient foundation models, and the emerging landscape of agentic time series systems."
+    },
+    {
+      "id": "ai4science",
+      "title": "AI4Science",
+      "eyebrow": "Scientific & engineering applications",
+      "description": "AI for scientific and engineering applications, from integrated-circuit thermal learning to visual inspection of road infrastructure."
+    },
+    {
+      "id": "ai-safety",
+      "title": "AI Safety",
+      "eyebrow": "Threat detection & secure systems",
+      "description": "Learning-based attack detection, user threat assessment, and secure resource allocation in cloud environments."
+    },
+    {
+      "id": "agent",
+      "title": "Agent",
+      "eyebrow": "Automated research & self-evolution",
+      "description": "My research interests include automated research and self-evolving agents.",
+      "interests": ["AutoResearch", "Self-evolving agents"]
+    }
+  ],
+  "additionalWorks": [
+    {
+      "id": "ddtime",
+      "researchArea": "time-series",
+      "title": "DDTime: Dataset Distillation with Spectral Alignment and Information Bottleneck for Time-Series Forecasting",
+      "authors": "Yuqi Li*, <strong>Kuiye Ding*</strong>, Chuanguang Yang, Hao Wang, Haoxuan Wang, Huiran Duan, Junming Liu, Yingli Tian",
+      "venue": "arXiv preprint",
+      "year": "2025",
+      "tags": [{ "text": "Paper", "link": "https://arxiv.org/abs/2511.16715" }]
+    },
+    {
+      "id": "kairos",
+      "researchArea": "time-series",
+      "title": "KAIROS: Unified Training for Universal Non-Autoregressive Time Series Forecasting",
+      "authors": "<strong>Kuiye Ding</strong>, Fanda Fan, Zheya Wang, Hongxiao Li, Yifan Wang, Lei Wang, Chunjie Luo, Jianfeng Zhan",
+      "venue": "arXiv preprint",
+      "year": "2025",
+      "tags": [{ "text": "Paper", "link": "https://arxiv.org/abs/2510.02084" }]
+    },
+    {
+      "id": "agentic-time-series-survey",
+      "researchArea": "time-series",
+      "title": "The Landscape of Agentic Time Series Systems: Architectures, Reliability, and Frontiers",
+      "authors": "Yifan Hu, Jie Yang, Xilin Dai, Wanxu Cai, <strong>Kuiye Ding</strong>, et al.",
+      "venue": "Preprint",
+      "tags": [{ "text": "Paper", "link": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=OL19JdwAAAAJ&citation_for_view=OL19JdwAAAAJ:WF5omc3nYNoC" }]
+    },
+    {
+      "id": "ic-thermbench",
+      "researchArea": "ai4science",
+      "title": "IC-ThermBench: An Open, Progressive Benchmark for Generalizable 2.5D/3D-IC Thermal Learning",
+      "authors": "David Huang*, Wenkai Yang*, <strong>Kuiye Ding*</strong>, Haiyang Xin",
+      "venue": "arXiv preprint",
+      "year": "2026",
+      "tags": [{ "text": "Paper", "link": "https://arxiv.org/abs/2608.23977" }]
+    },
+    {
+      "id": "scd-yolo",
+      "researchArea": "ai4science",
+      "title": "SCD-YOLO: A Novel Object Detection Method for Efficient Road Crack Detection",
+      "authors": "<strong>Kuiye Ding</strong>, Zhenhui Ding, Zengbin Zhang, Mao Yuan, Guangxiao Ma, Guohua Lv",
+      "venue": "Multimedia Systems",
+      "year": "2024",
+      "tags": [{ "text": "Paper", "link": "https://link.springer.com/article/10.1007/s00530-024-01538-y" }]
+    },
+    {
+      "id": "user-threat-vm-allocation",
+      "researchArea": "ai-safety",
+      "title": "A User Threat Driven Multi-Objective Adaptive VM Allocation Framework for Cloud Security",
+      "authors": "Xin Yang, <strong>Kuiye Ding</strong>, Zhun Zhang, Wenyuan Yang, Zhongjie Ba, Kui Ren",
+      "venue": "IEEE Transactions on Information Forensics and Security",
+      "year": "2026",
+      "tags": [{ "text": "Paper", "link": "https://ieeexplore.ieee.org/abstract/document/11503469/" }]
+    },
+    {
+      "id": "ub-craf",
+      "researchArea": "ai-safety",
+      "title": "UB-CRAF: A User Behavior-Driven Co-resident Risk Assessment Framework for Dynamically Migrating VMs in Clouds",
+      "authors": "<strong>Kuiye Ding</strong>, Xin Yang, Jintao Chen, Chao Liu, Songyao Hou, Wenyuan Yang",
+      "venue": "International Conference on Intelligent Computing (ICIC)",
+      "year": "2024",
+      "tags": [{ "text": "Paper", "link": "https://link.springer.com/chapter/10.1007/978-981-97-5606-3_29" }]
+    },
+    {
+      "id": "adaptive-vm-allocation",
+      "researchArea": "ai-safety",
+      "title": "An Adaptive VM Allocation Approach for Mitigating Co-resident Attack in Cloud Based on Improved NSGA-II",
+      "authors": "Xin Yang, Jintao Chen, <strong>Kuiye Ding</strong>, Chao Liu, Jiashen Liu, Songyao Hou",
+      "venue": "International Conference on Intelligent Computing (ICIC)",
+      "year": "2024",
+      "tags": [{ "text": "Paper", "link": "https://link.springer.com/chapter/10.1007/978-981-97-5606-3_37" }]
+    },
+    {
+      "id": "lolwtc",
+      "researchArea": "ai-safety",
+      "title": "LOLWTC: A Deep Learning Approach for Detecting Living off the Land Attacks",
+      "authors": "<strong>Kuiye Ding</strong>, Shuhui Zhang, Feifei Yu, Guangqi Liu",
+      "venue": "IEEE International Conference on Cloud Computing and Intelligent Systems (CCIS)",
+      "year": "2023",
+      "tags": [{ "text": "Paper", "link": "https://ieeexplore.ieee.org/abstract/document/10262997/" }]
+    }
+  ]
+}

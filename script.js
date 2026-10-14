@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (mobileMenuBtn && mobileMenu) {
         mobileMenuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
+            mobileMenuBtn.setAttribute('aria-expanded', String(!mobileMenu.classList.contains('hidden')));
         });
 
         // Close menu when a link is clicked
@@ -19,6 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
         mobileLinks.forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
+                mobileMenuBtn.setAttribute('aria-expanded', 'false');
             });
         });
     }
@@ -199,7 +201,7 @@ function loadPublications() {
                 // Year Header
                 const yearHeader = document.createElement('h3');
                 yearHeader.className = 'pub-year-header';
-                yearHeader.textContent = `-${year}-`;
+                yearHeader.textContent = year;
                 yearGroup.appendChild(yearHeader);
 
                 // List
@@ -355,7 +357,7 @@ function getVenueShortName(venueStr, year) {
     let suffix = '';
     
     // Check if it is a conference that needs year suffix
-    const conferences = ['NeurIPS', 'CVPR', 'ICCV', 'ECCV', 'ICRA', 'AAAI', 'GLOBECOM', 'INFOCOM', 'MOBICOM'];
+    const conferences = ['NeurIPS', 'ICASSP', 'ACM MM', 'CVPR', 'ICCV', 'ECCV', 'ICRA', 'AAAI', 'GLOBECOM', 'INFOCOM', 'MOBICOM'];
     for (const conf of conferences) {
         if (s.includes(conf)) {
             // Get last two digits of year
@@ -408,6 +410,8 @@ function getVenueFullName(venueStr, year) {
     
     // Conference Full Names Mapping (With Year Suffix)
     if (s.includes('NeurIPS')) return `Annual Conference on Neural Information Processing Systems (NeurIPS${yearSuffix})`;
+    if (s.includes('ICASSP')) return `IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP${yearSuffix})`;
+    if (s.includes('ACM MM')) return `ACM International Conference on Multimedia (ACM MM${yearSuffix})`;
     if (s.includes('CVPR')) return `IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR${yearSuffix})`;
     if (s.includes('ICCV')) return `IEEE/CVF International Conference on Computer Vision (ICCV${yearSuffix})`;
     if (s.includes('ECCV')) return `European Conference on Computer Vision (ECCV${yearSuffix})`;

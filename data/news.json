@@ -1,10 +1,10 @@
 [
   {
-    "date": "2026-09-25",
-    "content": "Our paper titled \"Multivariate Time Series Forecasting needs Cross Variable Loss\" has been accepted to NeurIPS 2026.",
+    "date": "2026-10-15",
+    "content": "Two papers, MSAR and CvLoss, have been accepted to <strong>NeurIPS 2026</strong>. See you in Sydney!",
     "links": [
-      { "text": "Paper", "url": "https://arxiv.org/abs/2608.05742" },
-      { "text": "Code", "url": "https://github.com/Day333/CvLoss" }
+      { "text": "CvLoss Paper", "url": "https://arxiv.org/abs/2608.05742" },
+      { "text": "CvLoss Code", "url": "https://github.com/Day333/CvLoss" }
     ]
   },
   {

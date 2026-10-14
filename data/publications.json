@@ -1,5 +1,17 @@
 [
   {
+    "id": "msar",
+    "researchArea": "time-series",
+    "title": "MSAR: Next-Scale Autoregressive Forecasting for Time Series via Modular Multi-Scale Decoupling",
+    "authors": "Fanda Fan*, <strong>Kuiye Ding*</strong>, Liming Mao, Wang Bingsong, Yao Wang, Xiaorui Wang, Ruijie Jian, Zhipeng Liu, Luqi Gong, Zhenghua Lu, Chunjie Luo, Jianfeng Zhan",
+    "venue": "Conference on Neural Information Processing Systems (NeurIPS)",
+    "year": "2026",
+    "highlight": "CCF-A · Core A*",
+    "tags": []
+  },
+  {
+    "id": "cvloss",
+    "researchArea": "time-series",
     "title": "Multivariate Time Series Forecasting needs Cross Variable Loss",
     "authors": "<strong>Kuiye Ding</strong>, Yifan Hu, Hanchen Wang, Hao Xue",
     "venue": "Conference on Neural Information Processing Systems (NeurIPS)",
@@ -12,6 +24,8 @@
     ]
   },
   {
+    "id": "distilts",
+    "researchArea": "time-series",
     "title": "Distilling Time Series Foundation Models for Efficient Forecasting",
     "authors": "Yuqi Li*, <strong>Kuiye Ding*</strong>, Chuanguang Yang, Szu-Yu Chen, Yingli Tian",
     "venue": "IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP 2026)",
@@ -21,6 +35,8 @@
     "tags": []
   },
   {
+    "id": "timemosaic",
+    "researchArea": "time-series",
     "title": "TimeMosaic: Information-Density Guided Time Series Forecasting via Adaptive Granularity Patch and Segment-wise Decoding",
     "authors": "<strong>Kuiye Ding</strong>, Fanda Fan, Chunyi Hou, Zheya Wang, Lei Wang, Zhengxin Yang, Jianfeng Zhan",
     "venue": "AAAI Conference on Artificial Intelligence (AAAI)",
@@ -32,6 +48,8 @@
     ]
   },
   {
+    "id": "dualsg",
+    "researchArea": "time-series",
     "title": "DualSG: A Dual-Stream Explicit Semantic-Guided Multivariate Time Series Forecasting Framework",
     "authors": "<strong>Kuiye Ding</strong>, Fanda Fan, Yao Wang, Ruijie Jian, Xiaorui Wang, Luqi Gong, Yishan Jiang, Chunjie Luo, Jianfeng Zhan",
     "venue": "ACM International Conference on Multimedia (ACM MM)",

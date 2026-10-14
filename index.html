@@ -1,327 +1,159 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kuiye Ding, Ph.D. student at the University of Technology Sydney. Research in time series, AI4Science, AI safety, and agents.">
     <title>Kuiye Ding - Academic Homepage</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              background: '#fefffe',
-              foreground: '#0f172a',
-              primary: '#1e293b',
-              accent: '#d4a562',
-              'accent-dark': '#b88a4d',
-              muted: '#64748b',
-            },
-            fontFamily: {
-              sans: ['Inter', 'sans-serif'],
-              serif: ['Crimson Text', 'serif'],
-            }
-          }
-        }
-      }
-    </script>
+    <link rel="stylesheet" href="homepage.css?v=20261015-service">
+    <script src="script.js?v=20261015-service" defer></script>
 </head>
-<body class="bg-background text-foreground antialiased font-sans">
-    <!-- Top Navigation -->
-    <nav class="top-nav glass fixed top-0 left-0 right-0 z-50 transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16 lg:h-20">
-                <!-- Logo/Name -->
-                <div class="flex-shrink-0">
-                    <a href="#" class="text-xl lg:text-2xl font-serif font-semibold text-primary hover:text-accent transition-colors duration-200">
-                        Ding Kuiye
-                    </a>
-                </div>
-
-                <!-- Desktop Navigation -->
-                <div class="hidden lg:block">
-                    <div class="ml-10 flex items-center space-x-8">
-                        <ul class="nav-links flex space-x-8">
-                            <li><a href="#homepage" class="nav-item">Homepage</a></li>
-                            <li><a href="#about" class="nav-item">About Me</a></li>
-                            <li><a href="#latest-news" class="nav-item">News</a></li>
-                            <li><a href="#publications" class="nav-item">Publications</a></li>
-                            <li><a href="#honors" class="nav-item">Honors</a></li>
-                            <li><a href="#services" class="nav-item">Service</a></li>
-                            <li><a href="#educations" class="nav-item">Education</a></li>
-                            <li><a href="#contact" class="nav-item">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Mobile Menu Button -->
-                <div class="lg:hidden flex items-center">
-                    <button class="mobile-menu-btn p-2 rounded-md text-neutral-600 hover:text-primary">
-                        <i class="fas fa-bars"></i>
-                    </button>
-                </div>
-            </div>
-            
-            <!-- Mobile Menu -->
-            <div class="mobile-menu hidden lg:hidden absolute top-16 left-0 w-full bg-white/95 backdrop-blur-md border-b border-neutral-200 shadow-lg" id="mobile-menu">
-                <ul class="flex flex-col py-4 px-4 space-y-4">
-                    <li><a href="#homepage" class="mobile-nav-item block text-neutral-600 hover:text-primary font-medium">Homepage</a></li>
-                    <li><a href="#about" class="mobile-nav-item block text-neutral-600 hover:text-primary font-medium">About Me</a></li>
-                    <li><a href="#latest-news" class="mobile-nav-item block text-neutral-600 hover:text-primary font-medium">News</a></li>
-                    <li><a href="#publications" class="mobile-nav-item block text-neutral-600 hover:text-primary font-medium">Publications</a></li>
-                    <li><a href="#honors" class="mobile-nav-item block text-neutral-600 hover:text-primary font-medium">Honors</a></li>
-                    <li><a href="#services" class="mobile-nav-item block text-neutral-600 hover:text-primary font-medium">Service</a></li>
-                    <li><a href="#educations" class="mobile-nav-item block text-neutral-600 hover:text-primary font-medium">Education</a></li>
-                    <li><a href="#contact" class="mobile-nav-item block text-neutral-600 hover:text-primary font-medium">Contact</a></li>
+<body class="homepage">
+    <header class="top-nav site-header glass">
+        <div class="site-nav-inner">
+            <a class="site-brand" href="#homepage">Kuiye Ding<span aria-hidden="true">.</span></a>
+            <nav class="site-desktop-nav" aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li><a href="#homepage">About</a></li>
+                    <li><a href="pages/research.html">Research</a></li>
+                    <li><a href="#latest-news">News</a></li>
+                    <li><a href="#publications">Publications</a></li>
+                    <li><a href="#services">Service</a></li>
+                    <li><a href="#educations">Background</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
-            </div>
+            </nav>
+            <button class="mobile-menu-btn site-menu-button" type="button" aria-label="Toggle navigation" aria-controls="mobile-menu" aria-expanded="false">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
         </div>
-    </nav>
-
-    <!-- Main Content Grid -->
-    <main class="min-h-screen pt-20 lg:pt-28 pb-12">
-        <div class="w-full max-w-[1380px] mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid-layout">
-                
-                <!-- Left Column - Profile (Sticky) -->
-                <div class="profile-column">
-                    <div class="profile-card sticky top-24">
-                        <!-- Profile Image -->
-                        <div class="profile-image-container mb-6 mx-auto max-w-[180px]">
-                            <img src="assets/profile.png" id="profile-img" alt="Kuiye Ding" class="w-full h-auto rounded-xl shadow-sm bg-gray-200">
-                        </div>
-
-                        <!-- Name and Title -->
-                        <div class="text-center mb-6">
-                            <h1 class="text-3xl font-serif font-bold text-primary mb-2">Ding Kuiye | 丁奎业</h1>
-                            <p class="text-lg text-accent font-medium mb-1">Artificial Intelligence</p>
-                            <p class="text-neutral-600 mb-2">University of Technology Sydney</p>
-                        </div>
-
-                        <!-- Contact Links -->
-                        <div class="social-links flex flex-wrap justify-center gap-3 mb-6">
-                            <a href="mailto:kuiyeding@gmail.com" class="social-btn" title="Email"><i class="fas fa-envelope"></i></a>
-                            <a href="assets/cv.pdf" target="_blank" class="social-btn" title="CV"><i class="fas fa-file-pdf"></i></a>
-                            <a href="https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=OL19JdwAAAAJ" target="_blank" class="social-btn" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-                            <a href="https://github.com/Day333" target="_blank" class="social-btn" title="GitHub"><i class="fab fa-github"></i></a>
-                            <!-- <a href="#" target="_blank" class="social-btn" title="ResearchGate"><i class="fab fa-researchgate"></i></a>
-                            <a href="#" target="_blank" class="social-btn" title="Blog"><i class="fas fa-blog"></i></a> -->
-                        </div>
-                        
-                        <!-- Research Interests -->
-                         <div class="research-interests-card bg-neutral-100 rounded-xl p-5 mb-6">
-                            <h3 class="font-serif font-bold text-lg text-primary mb-4 pb-2 border-b border-neutral-200 flex items-center">
-                                <i class="fas fa-lightbulb text-accent mr-2 text-base"></i> Research Interests
-                            </h3>
-                            <ul class="space-y-3">
-                                <li class="flex items-center text-neutral-700 hover:text-primary transition-colors">
-                                    <i class="fas fa-star text-accent/80 mr-3 w-5 text-center text-sm"></i>
-                                    <span class="text-sm font-medium">Data Mining</span>
-                                </li>
-                                <li class="flex items-center text-neutral-700 hover:text-primary transition-colors">
-                                    <i class="fas fa-star text-accent/80 mr-3 w-5 text-center text-sm"></i>
-                                    <span class="text-sm font-medium">Time Series Forecasting</span>
-                                </li>
-                                <li class="flex items-center text-neutral-700 hover:text-primary transition-colors">
-                                    <i class="fas fa-star text-accent/80 mr-3 w-5 text-center text-sm"></i>
-                                    <span class="text-sm font-medium">AutoResearch</span>
-                                </li>
-                                <li class="flex items-center text-neutral-700 hover:text-primary transition-colors">
-                                    <i class="fas fa-star text-accent/80 mr-3 w-5 text-center text-sm"></i>
-                                    <span class="text-sm font-medium">Self-Evolving Agent</span>
-                                </li>
-                            </ul>
-                        </div>
-
+        <nav id="mobile-menu" class="site-mobile-menu hidden" aria-label="Mobile navigation">
+            <a href="#homepage">About</a>
+            <a href="pages/research.html">Research</a>
+            <a href="#latest-news">News</a>
+            <a href="#publications">Publications</a>
+            <a href="#services">Academic Service</a>
+            <a href="#educations">Background</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <main class="site-main">
+        <div class="site-grid">
+            <aside class="site-profile" aria-label="Profile">
+                <div class="profile-card">
+                    <img class="site-avatar" src="assets/profile.png?v=e8d61a501277" id="profile-img" alt="Kuiye Ding" width="180" height="180">
+                    <div class="site-identity">
+                        <p class="site-profile-kicker">PH.D. STUDENT</p>
+                        <h1>Kuiye Ding<span lang="zh-CN">丁奎业</span></h1>
+                        <p class="site-affiliation">University of Technology Sydney</p>
+                        <p class="site-location">Sydney, Australia</p>
                     </div>
+                    <div class="site-social-links" aria-label="Profile links">
+                        <a href="mailto:kuiyeding@gmail.com">Email <span aria-hidden="true">↗</span></a>
+                        <a href="https://scholar.google.com/citations?user=OL19JdwAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Scholar <span aria-hidden="true">↗</span></a>
+                        <a href="https://github.com/Day333" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+                    </div>
+                    <div class="profile-focus">
+                        <h2>Research Interests</h2>
+                        <ul><li>Time Series & Data Mining</li><li>AI4Science</li><li>AI Safety</li><li>Agent & AutoResearch</li></ul>
+                    </div>
+                    <blockquote class="site-motto">“The simplest explanation is usually the best one.”</blockquote>
                 </div>
-
-                <!-- Right Column - Content -->
-                <div class="content-column space-y-12">
-                    
-                    <section id="homepage" class="scroll-mt-24">
-                        <span id="about"></span> <div class="section-header mb-6">
-                            <h2 class="text-3xl font-serif font-bold text-primary">About Me</h2>
-                        </div>
-                        <div class="prose max-w-none text-neutral-600 text-justify formal-font">
-                            <p class="mb-4">
-                                I am currently a Ph.D. student at the <strong>University of Technology Sydney (UTS)</strong>, supervised by 
-                                <a href="https://profiles.uts.edu.au/Hanchen.Wang" class="link-highlight" target="_blank">Dr. Hanchen Wang</a>. 
-Before that, I worked as a Machine Learning Engineer at the <strong>Institute of Computing Technology, Chinese Academy of Sciences (ICT, CAS)</strong>. I received my B.S. degree from Qilu University of Technology (Shandong Academy of Sciences), Faculty of Computer Science and Technology, majoring in Cyberspace Security.
-                            </p>
-                    
-                            <div class="highlight-box bg-accent/10 border-l-4 border-accent p-4 rounded-r-lg text-left font-sans">
-                                <p>
-                                    <i class="fas fa-envelope text-accent mr-2"></i>Feel free to reach out for potential collaborations or academic discussions via email: 
-                                    <a href="mailto:kuiyeding@gmail.com" class="link-highlight">kuiyeding@gmail.com</a>.
-                                </p>
+            </aside>
+            <div class="content-column">
+                <section id="homepage" class="home-panel home-introduction">
+                    <span id="about" class="section-anchor"></span>
+                    <p class="home-eyebrow">RESEARCH & ACADEMIC PROFILE</p>
+                    <h2>About Me</h2>
+                    <div class="home-biography">
+                        <p>I am a Ph.D. student at the <strong>University of Technology Sydney (UTS)</strong>, supervised by <a href="https://profiles.uts.edu.au/Hanchen.Wang" target="_blank" rel="noopener noreferrer">Dr. Hanchen Wang</a>.</p>
+                        <p>Previously, I worked as a Machine Learning Engineer at the <strong>Institute of Computing Technology, Chinese Academy of Sciences (ICT, CAS)</strong>. I received my B.S. degree in Cyberspace Security from the Faculty of Computer Science and Technology at Qilu University of Technology (Shandong Academy of Sciences).</p>
+                    </div>
+                    <div class="home-intro-links">
+                        <a href="pages/research.html">Explore my research <span aria-hidden="true">↗</span></a>
+                        <a href="mailto:kuiyeding@gmail.com">kuiyeding@gmail.com <span aria-hidden="true">↗</span></a>
+                    </div>
+                </section>
+                <section id="research-thrust" class="home-panel">
+                    <div class="home-section-header">
+                        <div><p class="home-eyebrow">FOCUS</p><h2>Research Areas</h2></div>
+                        <a class="home-section-link" href="pages/research.html">Browse all <span aria-hidden="true">↗</span></a>
+                    </div>
+                    <div class="home-research-areas">
+                        <a class="home-area" data-area="time-series" href="pages/research.html#time-series"><span class="home-area-number">01</span><h3>Time Series</h3><p>Forecasting & temporal learning</p><span class="home-area-arrow" aria-hidden="true">↗</span></a>
+                        <a class="home-area" data-area="ai4science" href="pages/research.html#ai4science"><span class="home-area-number">02</span><h3>AI4Science</h3><p>Scientific & engineering applications</p><span class="home-area-arrow" aria-hidden="true">↗</span></a>
+                        <a class="home-area" data-area="ai-safety" href="pages/research.html#ai-safety"><span class="home-area-number">03</span><h3>AI Safety</h3><p>Threat detection & secure systems</p><span class="home-area-arrow" aria-hidden="true">↗</span></a>
+                        <a class="home-area" data-area="agent" href="pages/research.html#agent"><span class="home-area-number">04</span><h3>Agent</h3><p>Automated research & self-evolution</p><span class="home-area-arrow" aria-hidden="true">↗</span></a>
+                    </div>
+                </section>
+                <section id="latest-news" class="home-panel">
+                    <div class="home-section-header">
+                        <div><p class="home-eyebrow">UPDATES</p><h2>News</h2></div>
+                        <a class="home-section-link" href="pages/all-news.html">View all <span aria-hidden="true">↗</span></a>
+                    </div>
+                    <div id="news-container" class="news-list"></div>
+                </section>
+                <section id="publications" class="home-panel">
+                    <div class="home-section-header">
+                        <div><p class="home-eyebrow">SELECTED WORK</p><h2>Publications</h2></div>
+                        <a class="home-section-link" href="pages/research.html">View by area <span aria-hidden="true">↗</span></a>
+                    </div>
+                    <p class="home-caption">* denotes equal contribution (co-first authorship).</p>
+                    <div class="publications-list"></div>
+                </section>
+                <section id="services" class="home-panel">
+                    <div class="home-section-header">
+                        <div><p class="home-eyebrow">COMMUNITY</p><h2>Academic Service</h2></div>
+                        <span class="home-section-label">Peer review</span>
+                    </div>
+                    <div class="service-grid">
+                        <div class="service-card">
+                            <h3>Conference Reviewer</h3>
+                            <div class="service-venues">
+                                <span>AAAI</span><span>IJCNN</span>
+                                <a href="https://www.sigweb.org/wsdm/" target="_blank" rel="noopener noreferrer" title="ACM International Conference on Web Search and Data Mining">ACM WSDM</a>
+                                <a href="https://www.ieeesmc2026.org/" target="_blank" rel="noopener noreferrer" title="IEEE International Conference on Systems, Man, and Cybernetics">IEEE SMC 2026</a>
                             </div>
                         </div>
-                    </section>
-
-                    <!-- Research Thrust Section -->
-                    <section id="research-thrust" class="scroll-mt-24">
-                        <div class="section-header mb-6">
-                            <h2 class="text-3xl font-serif font-bold text-primary">🚀 Research Thrust</h2>
+                        <div class="service-card"><h3>Journal Reviewer</h3><p>IEEE Transactions on Dependable and Secure Computing <strong>(TDSC)</strong></p></div>
+                    </div>
+                    <details id="reviewer-certificate" class="service-certificate">
+                        <summary>
+                            <span class="certificate-summary-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M6 3h12v12H6zM9 7h6M9 10h6"/><circle cx="12" cy="16" r="3"/><path d="M10 18l-1 4 3-1 3 1-1-4"/></svg></span>
+                            <span class="certificate-summary-text"><strong>Reviewer Certificate</strong><span>IEEE SMC 2026 · Certificate of Appreciation</span></span>
+                            <span class="certificate-summary-action">View certificate <span class="certificate-chevron" aria-hidden="true">⌄</span></span>
+                        </summary>
+                        <div class="certificate-content">
+                            <figure>
+                                <img src="assets/certificates/ieee-smc-2026-reviewer.png" alt="IEEE SMC 2026 Certificate of Appreciation presented to Kuiye Ding for service as a reviewer" width="1440" height="810" loading="lazy">
+                                <figcaption>IEEE International Conference on Systems, Man, and Cybernetics · Bellevue, USA · October 4–7, 2026</figcaption>
+                            </figure>
+                            <a class="certificate-pdf-link" href="assets/certificates/ieee-smc-2026-reviewer.pdf" target="_blank" rel="noopener noreferrer">Open original PDF <span aria-hidden="true">↗</span></a>
                         </div>
-                        <div class="prose max-w-none text-neutral-600 text-justify formal-font">
-                            <blockquote class="pl-4 border-l-4 border-accent/30 italic text-neutral-600 bg-neutral-50/50 p-4 rounded-r-lg mb-6">
-                                “The simplest explanation is usually the best one.”
-                            </blockquote>
-                            
-                            
-                        </div>
-                    </section>
-
-                    <!-- News Section -->
-                    <section id="latest-news" class="scroll-mt-24">
-                        <div class="section-header mb-6 flex justify-between items-center">
-                            <h2 class="text-3xl font-serif font-bold text-primary">🔥 News</h2>
-                            <a href="pages/all-news.html" class="text-sm font-medium text-accent hover:text-accent-dark transition-colors">View All <i class="fas fa-arrow-right ml-1"></i></a>
-                        </div>
-                        <div id="news-container" class="news-list space-y-4">
-                            <!-- Dynamic Content loaded from data/news.json -->
-                        </div>
-                    </section>
-
-
-
-                    <!-- Publications Section -->
-                    <section id="publications" class="scroll-mt-24">
-                        <div class="section-header mb-6">
-                            <h2 class="text-3xl font-serif font-bold text-primary">📄 Publications</h2>
-                            <!-- <p class="text-sm text-neutral-500 mt-1">(* means equal contribution)</p> -->
-                        </div>
-                        
-                        <div class="publications-list space-y-6">
-                            <!-- Dynamic Content loaded from data/publications.json -->
-                        </div>
-                    </section>
-
-                   
-                    <!-- Academic Service Section -->
-                    <section id="services" class="scroll-mt-24">
-                        <div class="section-header mb-6">
-                            <h2 class="text-3xl font-serif font-bold text-primary">💼 Academic Service</h2>
-                        </div>
-                        <div class="timeline space-y-6">
-                            <!-- Reviewer -->
-                            <div class="timeline-item flex gap-4">
-                                <div class="school-logo-container w-16 h-16 flex-shrink-0 bg-white rounded-lg shadow-sm p-2 flex items-center justify-center border border-neutral-100 text-2xl text-accent">
-                                    <i class="fas fa-edit"></i>
-                                </div>
-                                <div class="timeline-content">
-                                    <h3 class="font-semibold text-primary">Reviewer</h3>
-                                    <p class="text-sm text-accent font-medium">AAAI, IJCNN, TDSC</p>
-                                    <p class="text-sm text-neutral-600 mt-1 leading-relaxed">
-                                        Served as a reviewer for AAAI, IJCNN, and IEEE Transactions on Dependable and Secure Computing (TDSC).
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-    
-                    <!-- Education Section -->
-                    <section id="educations" class="scroll-mt-24">
-                        <div class="section-header mb-6">
-                            <h2 class="text-3xl font-serif font-bold text-primary">🎓 Education</h2>
-                        </div>
-                        <div class="timeline space-y-8">
-                            <div class="timeline-item flex gap-4">
-                                <div class="school-logo-container w-16 h-16 flex-shrink-0 bg-white rounded-lg shadow-sm p-2 flex items-center justify-center border border-neutral-100">
-                                    <i class="fas fa-university text-3xl text-primary/40"></i>
-                                </div>
-                                <div class="timeline-content">
-                                    <div class="flex justify-between items-start">
-                                        <h3 class="font-semibold text-primary">Ph.D. in Computer Science</h3>
-                                        <span class="text-xs font-sans px-2 py-1 bg-accent/10 text-accent rounded">2026 - Present</span>
-                                    </div>
-                                    <p class="text-sm text-accent font-medium">University of Technology Sydney (UTS)</p>
-                                    <p class="text-sm text-neutral-500">Doctoral Student</p>
-                                    <p class="text-sm text-neutral-600 mt-1">
-                                        Supervised by Dr. Hanchen Wang. Research on Time-Series Data Compression & LLMs.
-                                    </p>
-                                </div>
-                            </div>
-                    
-                            <div class="timeline-item flex gap-4">
-                                <div class="school-logo-container w-16 h-16 flex-shrink-0 bg-white rounded-lg shadow-sm p-2 flex items-center justify-center border border-neutral-100">
-                                    <i class="fas fa-graduation-cap text-3xl text-neutral-300"></i>
-                                </div>
-                                <div class="timeline-content">
-                                    <div class="flex justify-between items-start">
-                                        <h3 class="font-semibold text-primary">B.S. in Cybersecurity</h3>
-                                        <span class="text-xs font-sans px-2 py-1 bg-neutral-100 text-neutral-500 rounded">2021 - 2025</span>
-                                    </div>
-                                    <p class="text-sm text-accent font-medium">Qilu University of Technology (Shandong Academy of Sciences)</p>
-                                    <p class="text-sm text-neutral-500">Undergraduate</p>
-                                    <p class="text-sm text-neutral-600 mt-1">
-                                        Faculty of Computer Science and Technology
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <!-- Research Internship & Experience Section -->
-                    <section id="experiences" class="scroll-mt-24">
-                        <div class="section-header mb-6">
-                            <h2 class="text-3xl font-serif font-bold text-primary">🧪 Research Internship & Experience</h2>
-                        </div>
-                    
-                        <div class="timeline space-y-6">
-                            <!-- Experience Item 1 -->
-                            <div class="timeline-item flex gap-4">
-                                <div class="school-logo-container w-16 h-16 flex-shrink-0 bg-white rounded-lg shadow-sm p-2 flex items-center justify-center border border-neutral-100 text-2xl text-accent">
-                                    <i class="fas fa-flask"></i>
-                                </div>
-                                <div class="timeline-content">
-                                    <h3 class="font-semibold text-primary">Research Intern</h3>
-                                    <p class="text-sm text-accent font-medium">China University of Petroleum (East China)</p>
-                                    <p class="text-sm text-neutral-500">Oct 2023 - Sep 2024</p>
-                                    <p class="text-sm text-neutral-600 mt-1 leading-relaxed">
-                                        Worked with Assistant Professor <strong>Xin Yang</strong> under his supervision.
-                                    </p>
-                                </div>
-                            </div>
-                    
-                            <!-- Experience Item 2 -->
-                            <div class="timeline-item flex gap-4">
-                                <div class="school-logo-container w-16 h-16 flex-shrink-0 bg-white rounded-lg shadow-sm p-2 flex items-center justify-center border border-neutral-100 text-2xl text-accent">
-                                    <i class="fas fa-briefcase"></i>
-                                </div>
-                                <div class="timeline-content">
-                                    <h3 class="font-semibold text-primary">Visiting Student, Machine Learning Engineer</h3>
-                                    <p class="text-sm text-accent font-medium">Institute of Computing Technology, Chinese Academy of Sciences</p>
-                                    <p class="text-sm text-neutral-500">Oct 2024 - Dec 2025</p>
-                                    <p class="text-sm text-neutral-600 mt-1 leading-relaxed">
-                                        Served as a visiting student and algorithm engineer, supervised by <strong>Jianfeng Zhan</strong> and <strong>Fanda Fan</strong>.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                </div>
+                    </details>
+                </section>
+                <section id="educations" class="home-panel">
+                    <div class="home-section-header"><div><p class="home-eyebrow">BACKGROUND</p><h2>Education</h2></div></div>
+                    <div class="background-list">
+                        <article class="background-entry"><p class="background-date">2026 – Present</p><div><h3>Ph.D. in Computer Science</h3><p class="background-institution">University of Technology Sydney</p><p>Supervised by Dr. Hanchen Wang. Research on time series data compression and LLMs.</p></div></article>
+                        <article class="background-entry"><p class="background-date">2021 – 2025</p><div><h3>B.S. in Cybersecurity</h3><p class="background-institution">Qilu University of Technology (Shandong Academy of Sciences)</p><p>Faculty of Computer Science and Technology</p></div></article>
+                    </div>
+                </section>
+                <section id="experiences" class="home-panel">
+                    <div class="home-section-header"><div><p class="home-eyebrow">BACKGROUND</p><h2>Research Experience</h2></div></div>
+                    <div class="background-list">
+                        <article class="background-entry"><p class="background-date">Oct 2024 – Dec 2025</p><div><h3>Visiting Student · Machine Learning Engineer</h3><p class="background-institution">Institute of Computing Technology, Chinese Academy of Sciences</p><p>Supervised by <strong>Jianfeng Zhan</strong> and <strong>Fanda Fan</strong>.</p></div></article>
+                        <article class="background-entry"><p class="background-date">Oct 2023 – Sep 2024</p><div><h3>Research Intern</h3><p class="background-institution">China University of Petroleum (East China)</p><p>Supervised by Assistant Professor <strong>Xin Yang</strong>.</p></div></article>
+                    </div>
+                </section>
+                <section id="contact" class="home-panel home-contact">
+                    <div><p class="home-eyebrow">CONTACT</p><h2>Get in touch</h2><p>For research collaborations and academic discussions.</p></div>
+                    <a href="mailto:kuiyeding@gmail.com">kuiyeding@gmail.com <span aria-hidden="true">↗</span></a>
+                </section>
             </div>
         </div>
     </main>
-
-    <!-- Footer -->
-    <footer class="bg-white border-t border-neutral-200 py-8 mt-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p class="text-neutral-500 text-sm">
-                &copy; 2026 Kuiye Ding. All rights reserved. <br>
-                Powered by <a href="#" class="text-accent hover:text-accent-dark">AcaNova-X Template</a>
-            </p>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+    <footer class="site-footer"><p>© 2026 Kuiye Ding. All rights reserved.</p><p>Adapted from AcaNova-X Template.</p></footer>
 </body>
 </html>
