@@ -1,3 +1,5 @@
+const homepageDataVersion = '20261015-neurips-2';
+
 document.addEventListener('DOMContentLoaded', function() {
     // Make all links open in a new tab
     makeAllLinksOpenInNewTab();
@@ -91,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function() {
         newsJsonPath = '../data/news.json';
     }
     
-    fetch(newsJsonPath)
+    fetch(newsJsonPath + '?v=' + homepageDataVersion, { cache: 'no-cache' })
         .then(response => response.json())
         .then(data => {
             // Check if we're on the homepage
@@ -156,7 +158,7 @@ function loadPublications() {
     // Clear existing publications
     publicationsList.innerHTML = '';
     
-    fetch(publicationsJsonPath)
+    fetch(publicationsJsonPath + '?v=' + homepageDataVersion, { cache: 'no-cache' })
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
