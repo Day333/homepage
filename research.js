@@ -7,6 +7,28 @@ const areaIcons = {
     'agent': '<rect x="4" y="7" width="16" height="13" rx="4"/><path d="M12 3v4M1 12h3m16 0h3M9 16h6"/><circle cx="8.5" cy="12" r=".7"/><circle cx="15.5" cy="12" r=".7"/>'
 };
 
+const researchDataVersion = '20261015-catalog-2';
+
+function buildResearchCatalog(publications, research) {
+    // Older copies of the selected time-series papers do not have category IDs.
+    const selectedArea = research.selectedPublicationsArea || 'time-series';
+    const works = [
+        ...publications.map(work => ({
+            ...work,
+            id: work.id || work.title,
+            researchArea: work.researchArea || selectedArea
+        })),
+        ...research.additionalWorks
+    ];
+    const knownAreas = new Set(research.areas.map(area => area.id));
+    for (const work of works) {
+        if (!knownAreas.has(work.researchArea)) {
+            throw new Error('Unknown research area for ' + work.title);
+        }
+    }
+    return works;
+}
+
 function element(tag, className, text) {
     const node = document.createElement(tag);
     if (className) node.className = className;
@@ -64,12 +86,12 @@ async function loadResearch() {
     try {
         const [publications, research] = await Promise.all(
             ['../data/publications.json', '../data/research.json'].map(async path => {
-                const response = await fetch(path);
+                const response = await fetch(path + '?v=' + researchDataVersion, { cache: 'no-cache' });
                 if (!response.ok) throw new Error('Could not load ' + path);
                 return response.json();
             })
         );
-        const works = [...publications, ...research.additionalWorks];
+        const works = buildResearchCatalog(publications, research);
         const areaWorks = new Map();
         const fragment = document.createDocumentFragment();
 
