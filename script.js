@@ -1,4 +1,4 @@
-const homepageDataVersion = '20261015-neurips-2';
+const homepageDataVersion = '20261015-academic';
 
 document.addEventListener('DOMContentLoaded', function() {
     // Make all links open in a new tab
@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Load publications data from JSON file
-    loadPublications();
+    if (document.querySelector('.publications-list')) loadPublications();
     
     // Smooth scrolling for navigation links
     const navLinks = document.querySelectorAll('.nav-links a');
@@ -218,29 +218,21 @@ function loadPublications() {
                     const contentWrapper = document.createElement('div');
                     contentWrapper.className = 'pub-content-wrapper';
 
-                    // --- Line 1: [Venue] Title ---
+                    // Title, followed by authors and venue on separate lines.
                     const line1 = document.createElement('div');
                     line1.className = 'pub-line-1';
 
-                    // Venue Tag
-                    const venueTagSpan = document.createElement('span');
-                    const venueShort = getVenueShortName(pub.venue, pub.year);
-                    venueTagSpan.textContent = `[${venueShort}]`;
-                    venueTagSpan.className = 'pub-venue-tag';
-                    if (venueShort.toLowerCase().includes('arxiv') || venueShort.toLowerCase().includes('preprint')) {
-                        venueTagSpan.classList.add('tag-arxiv');
-                    } else {
-                        venueTagSpan.classList.add('tag-conference');
-                    }
-                    line1.appendChild(venueTagSpan);
-
-                    // Title (Text only, no link on title itself)
-                    const titleSpan = document.createElement('span');
+                    const paperLink = (pub.tags || []).find(tag => tag.text === 'Paper' && tag.link && tag.link !== '#');
+                    const titleSpan = document.createElement(paperLink ? 'a' : 'span');
+                    if (paperLink) titleSpan.href = paperLink.link;
                     titleSpan.className = 'pub-title-text';
                     titleSpan.textContent = pub.title;
                     line1.appendChild(titleSpan);
                     
-                    // Paper/Code Buttons
+                    const resourceLinks = document.createElement('span');
+                    resourceLinks.className = 'pub-resource-links';
+
+                    // Paper and code links.
                     if (pub.tags) {
                         pub.tags.forEach(tag => {
                             if (tag.link && tag.link !== '#') {
@@ -249,14 +241,9 @@ function loadPublications() {
                                 btn.href = tag.link;
                                 btn.target = '_blank';
                                 
-                                // Customize text/icon based on tag type
-                                if (tag.text === 'Paper') {
-                                    btn.textContent = 'PDF';
-                                } else {
-                                    btn.textContent = tag.text;
-                                }
+                                btn.textContent = tag.text.toLowerCase();
                                 
-                                line1.appendChild(btn);
+                                resourceLinks.appendChild(btn);
                             }
                         });
                     }
@@ -266,27 +253,31 @@ function loadPublications() {
                     if (pub.thumbnail) {
                         const btnPreview = document.createElement('button');
                         btnPreview.className = 'pub-link-btn pub-btn-preview';
-                        btnPreview.textContent = 'Image';
+                        btnPreview.type = 'button';
+                        btnPreview.textContent = 'figure';
+                        btnPreview.setAttribute('aria-expanded', 'false');
                         btnPreview.onclick = function() {
                             if (li.classList.contains('with-thumbnail-expanded')) {
                                 li.classList.remove('with-thumbnail-expanded');
                                 thumbBox.style.display = 'none';
                                 btnPreview.classList.remove('active');
+                                btnPreview.setAttribute('aria-expanded', 'false');
                             } else {
                                 li.classList.add('with-thumbnail-expanded');
                                 thumbBox.style.display = 'block';
                                 btnPreview.classList.add('active');
+                                btnPreview.setAttribute('aria-expanded', 'true');
                             }
                         };
-                        line1.appendChild(btnPreview);
+                        resourceLinks.appendChild(btnPreview);
 
                         // Create thumbnail container
                         thumbBox = document.createElement('div');
                         thumbBox.className = 'pub-thumbnail-box';
                         thumbBox.style.display = 'none';
                         const thumbImg = document.createElement('img');
-                        thumbImg.src = pub.thumbnail;
-                        thumbImg.alt = 'Publication Thumbnail';
+                        thumbImg.src = (window.location.pathname.includes('/pages/') ? '../' : '') + pub.thumbnail;
+                        thumbImg.alt = 'Figure from ' + pub.title;
                         thumbBox.appendChild(thumbImg);
                     }
                     
@@ -315,20 +306,13 @@ function loadPublications() {
                         line3.appendChild(badge);
                     }
 
-                    // 2. Full Venue Name (No Year for Journals)
-                    const fullVenueName = getVenueFullName(pub.venue, pub.year);
+                    // 2. Conference and year.
                     const venueNameSpan = document.createElement('span');
-                    venueNameSpan.textContent = fullVenueName;
+                    venueNameSpan.className = 'pub-venue-name';
+                    venueNameSpan.textContent = getVenueShortName(pub.venue, pub.year);
                     line3.appendChild(venueNameSpan);
 
-                    // 3. CCF Rank
-                    const ccfRank = getCCFRank(fullVenueName, pub.venue);
-                    if (ccfRank) {
-                        const rankSpan = document.createElement('span');
-                        rankSpan.className = `ccf-rank ccf-${ccfRank.toLowerCase()}`;
-                        rankSpan.textContent = `(CCF-${ccfRank})`;
-                        line3.appendChild(rankSpan);
-                    }
+                    if (resourceLinks.childElementCount) line3.appendChild(resourceLinks);
 
                     contentWrapper.appendChild(line3);
                     
@@ -366,7 +350,7 @@ function getVenueShortName(venueStr, year) {
             if (year) {
                 const yearStr = year.toString();
                 if (yearStr.length === 4) {
-                    suffix = "'" + yearStr.substring(2);
+                    suffix = ' ' + yearStr;
                 }
             }
             return conf + suffix;
@@ -484,9 +468,9 @@ function renderNewsItems(newsData, containerId) {
         const contentElement = document.createElement('div');
         contentElement.className = 'news-content';
         
-        // Create emoji and content text
+        // News text.
         const textSpan = document.createElement('span');
-        textSpan.innerHTML = '🎉 ' + newsItem.content;
+        textSpan.innerHTML = newsItem.content;
         contentElement.appendChild(textSpan);
         
         // Add links if provided in the links array format

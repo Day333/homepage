@@ -9,19 +9,19 @@
   },
   {
     "date": "2026-04-23",
-    "content": "Our paper titled \"A User Threat Driven Multi-Objective Adaptive VM Allocation Framework for Cloud Security\" has been accepted to IEEE Transactions on Information Forensics & Security (TIFS), a CCF A and CAS Q1 TOP journal.",
+    "content": "Our paper on threat-driven VM allocation was accepted to IEEE Transactions on Information Forensics & Security (TIFS).",
     "links": []
   },
   {
     "date": "2026-01-18",
-    "content": "Our paper titled \"Distilling Time Series Foundation Models for Efficient Forecasting\" has been accepted to ICASSP 2026.",
+    "content": "\"Distilling Time Series Foundation Models for Efficient Forecasting\" was accepted to ICASSP 2026.",
     "links": []
   },
   {
     "date": "2026-01-18",
-    "content": "I have created and launched my academic homepage.",
+    "content": "This website is online.",
     "links": [
-      { "text": "Homepage", "url": "https://day333.github.io/dky/index.html" }
+      { "text": "Homepage", "url": "https://day333.github.io/homepage/" }
     ]
   }
 ]

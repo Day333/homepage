@@ -5,26 +5,22 @@
     {
       "id": "time-series",
       "title": "Time Series",
-      "eyebrow": "Forecasting & temporal learning",
-      "description": "Forecasting methods, learning objectives, efficient foundation models, and the emerging landscape of agentic time series systems."
+      "description": "Time series forecasting, model and dataset distillation, and agentic systems."
     },
     {
       "id": "ai4science",
       "title": "AI4Science",
-      "eyebrow": "Scientific & engineering applications",
-      "description": "AI for scientific and engineering applications, from integrated-circuit thermal learning to visual inspection of road infrastructure."
+      "description": "Thermal prediction for integrated circuits and visual inspection of road infrastructure."
     },
     {
       "id": "ai-safety",
       "title": "AI Safety",
-      "eyebrow": "Threat detection & secure systems",
-      "description": "Learning-based attack detection, user threat assessment, and secure resource allocation in cloud environments."
+      "description": "Cloud security, threat detection, and secure resource allocation."
     },
     {
       "id": "agent",
       "title": "Agent",
-      "eyebrow": "Automated research & self-evolution",
-      "description": "My research interests include automated research and self-evolving agents.",
+      "description": "I am interested in automated research and self-evolving agents.",
       "interests": ["AutoResearch", "Self-evolving agents"]
     }
   ],

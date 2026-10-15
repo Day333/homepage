@@ -3,59 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Publications - Kuiye Ding</title>
-    <link rel="stylesheet" href="../styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Selected Publications - Kuiye Ding</title>
+    <link rel="stylesheet" href="../homepage.css?v=20261015-academic">
+    <script src="../script.js?v=20261015-academic" defer></script>
 </head>
 <body>
-    <!-- Top Navigation - Shared Banner -->
-    <nav class="top-nav">
-        <ul class="nav-links">
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="#" class="active">All Publications</a></li>
-        </ul>
-    </nav>
-
-    <!-- Content Container -->
-    <div class="content-container">
-        <!-- Main Content -->
-        <div class="main-wrapper">
-            <main class="main-content">
-                <section id="all-publications" class="section">
-                    <div class="section-header">
-                        <h2 class="section-title">All Publications</h2>
-                        <p class="text-sm text-neutral-500 mt-1">* denotes equal contribution (co-first authorship).</p>
-                    </div>
-                    
-                    <div class="content-block">
-                        <div class="publications-list">
-                            <!-- Publications will be dynamically loaded here -->
-                        </div>
-                        
-                        <div class="view-all-container">
-                            <a href="../index.html" class="view-all-btn">
-                                <i class="fas fa-arrow-left"></i> Back to Homepage
-                            </a>
-                        </div>
-                    </div>
-                </section>
-            </main>
-        </div>
-    </div>
-
-    <footer>
-        <p>&copy; <span id="current-year"></span> Kuiye Ding. All rights reserved.</p>
-    </footer>
-
-    <script>
-        // Update copyright year
-        document.getElementById('current-year').textContent = new Date().getFullYear();
-
-        // Handle URL parameters for filtering (reserved for future use)
-        const urlParams = new URLSearchParams(window.location.search);
-        const filter = urlParams.get('filter');
-        // Actual loading & rendering logic handled in script.js
-    </script>
-    <script src="../script.js?v=20261015-neurips-2"></script>
+    <header class="top-nav site-header"><nav class="site-navigation" aria-label="Main navigation"><a class="page-home-link" href="../index.html">Kuiye Ding</a><a href="../index.html">Home</a><a href="research.html">Research</a><a href="all-news.html">News</a></nav></header>
+    <main class="site-main"><section id="all-publications">
+        <div class="section-heading"><h1 class="page-title">Selected Publications</h1><a href="research.html">All publications by topic</a></div>
+        <p class="section-note">* Equal contribution.</p>
+        <div class="publications-list"></div>
+    </section></main>
+    <footer class="site-footer"><p>© 2026 Kuiye Ding. <a href="../index.html">Back to homepage</a>.</p></footer>
 </body>
 </html>

@@ -1,13 +1,6 @@
 'use strict';
 
-const areaIcons = {
-    'time-series': '<path d="M3 17l4-5 4 3 5-9 5 4"/><path d="M3 4v16h18"/>',
-    'ai4science': '<circle cx="12" cy="12" r="2"/><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/>',
-    'ai-safety': '<path d="M12 3l8 3v6c0 5-8 9-8 9s-8-4-8-9V6z"/><path d="M8 12l3 3 5-6"/>',
-    'agent': '<rect x="4" y="7" width="16" height="13" rx="4"/><path d="M12 3v4M1 12h3m16 0h3M9 16h6"/><circle cx="8.5" cy="12" r=".7"/><circle cx="15.5" cy="12" r=".7"/>'
-};
-
-const researchDataVersion = '20261015-catalog-2';
+const researchDataVersion = '20261015-academic';
 
 function buildResearchCatalog(publications, research) {
     // Older copies of the selected time-series papers do not have category IDs.
@@ -47,7 +40,7 @@ function venueLabel(work) {
     else if (venue.includes('ICIC')) short = 'ICIC';
     else if (venue.includes('CCIS')) short = 'IEEE CCIS';
     else if (/arxiv|preprint/i.test(venue)) short = 'Preprint';
-    return short + (work.year ? ' · ' + work.year : '');
+    return short + (work.year ? ' ' + work.year : '');
 }
 
 function renderWork(work) {
@@ -57,9 +50,18 @@ function renderWork(work) {
     const venue = element('span', 'research-work-venue', venueLabel(work));
     if (/arxiv|preprint/i.test(work.venue || 'Preprint')) venue.classList.add('is-preprint');
     metadata.appendChild(venue);
-    card.appendChild(metadata);
-
-    card.appendChild(element('h3', 'research-work-title', work.title));
+    const title = element('h3', 'research-work-title');
+    const paper = (work.tags || []).find(tag => tag.text === 'Paper' && tag.link && tag.link !== '#');
+    if (paper) {
+        const titleLink = element('a', '', work.title);
+        titleLink.href = paper.link;
+        titleLink.target = '_blank';
+        titleLink.rel = 'noopener noreferrer';
+        title.appendChild(titleLink);
+    } else {
+        title.textContent = work.title;
+    }
+    card.appendChild(title);
     if (work.authors) {
         const authors = element('p', 'research-work-authors');
         authors.innerHTML = work.authors;
@@ -68,14 +70,14 @@ function renderWork(work) {
 
     const links = element('div', 'research-work-links');
     (work.tags || []).filter(tag => tag.link && tag.link !== '#').forEach(tag => {
-        const link = element('a', 'research-work-link', tag.text);
+        const link = element('a', 'research-work-link', tag.text.toLowerCase());
         link.href = tag.link;
         link.target = '_blank';
         link.rel = 'noopener noreferrer';
-        link.appendChild(element('span', '', ' ↗'));
         links.appendChild(link);
     });
-    if (links.childElementCount) card.appendChild(links);
+    if (links.childElementCount) metadata.appendChild(links);
+    card.appendChild(metadata);
     return card;
 }
 
@@ -106,10 +108,8 @@ async function loadResearch() {
             filter.dataset.area = area.id;
             filter.setAttribute('aria-pressed', 'false');
             filter.setAttribute('aria-controls', 'research-content');
-            filter.innerHTML = '<svg class="research-area-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + areaIcons[area.id] + '</svg>';
             filter.appendChild(element('span', 'research-area-name', area.title));
-            filter.appendChild(element('span', 'research-area-caption', area.eyebrow));
-            filter.appendChild(element('span', 'research-area-count', items.length ? items.length + ' works' : 'Research direction'));
+            if (items.length) filter.appendChild(element('span', 'research-area-count', '(' + items.length + ')'));
             filters.appendChild(filter);
 
             const section = element('section', 'research-area-section');
@@ -117,7 +117,6 @@ async function loadResearch() {
             section.dataset.area = area.id;
             section.setAttribute('aria-labelledby', area.id + '-title');
             const header = element('div', 'research-section-heading');
-            header.appendChild(element('span', 'research-section-number', String(index + 1).padStart(2, '0')));
             const text = element('div');
             const heading = element('h2', 'research-section-title', area.title);
             heading.id = area.id + '-title';
@@ -131,12 +130,7 @@ async function loadResearch() {
                 items.forEach(work => grid.appendChild(renderWork(work)));
                 section.appendChild(grid);
             } else {
-                const interests = element('div', 'research-interest-card');
-                interests.appendChild(element('p', 'research-interest-label', 'RESEARCH INTERESTS'));
-                const topics = element('div', 'research-interest-topics');
-                (area.interests || []).forEach(interest => topics.appendChild(element('span', '', interest)));
-                interests.appendChild(topics);
-                section.appendChild(interests);
+                section.appendChild(element('p', 'research-empty', 'No publications yet.'));
             }
             fragment.appendChild(section);
         });

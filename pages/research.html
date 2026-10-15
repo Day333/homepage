@@ -3,68 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Kuiye Ding's research in time series, AI4Science, AI safety, and agents.">
-    <title>Research by Area - Kuiye Ding</title>
-    <link rel="stylesheet" href="../styles.css">
-    <link rel="stylesheet" href="../research.css?v=20261015-service">
-    <script src="../research.js?v=20261015-catalog-2" defer></script>
+    <meta name="description" content="Kuiye Ding's publications in time series, AI4Science, AI safety, and agents.">
+    <title>Research - Kuiye Ding</title>
+    <link rel="stylesheet" href="../homepage.css?v=20261015-academic">
+    <link rel="stylesheet" href="../research.css?v=20261015-academic">
+    <script src="../research.js?v=20261015-academic" defer></script>
 </head>
 <body class="research-page">
-    <header class="research-header glass">
-        <div class="research-header-inner">
-            <a class="research-brand" href="../index.html">Ding Kuiye</a>
-            <nav class="research-topnav" aria-label="Main navigation">
-                <a href="../index.html">Homepage</a>
-                <a href="research.html" aria-current="page">Research</a>
-                <a href="../index.html#publications">Publications</a>
-                <a href="../index.html#services">Service</a>
-                <a href="mailto:kuiyeding@gmail.com">Contact</a>
-            </nav>
-        </div>
+    <header class="site-header">
+        <nav class="site-navigation" aria-label="Main navigation">
+            <a class="page-home-link" href="../index.html">Kuiye Ding</a>
+            <a href="../index.html">Home</a>
+            <a href="research.html" aria-current="page">Research</a>
+            <a href="../index.html#latest-news">News</a>
+            <a href="../index.html#services">Service</a>
+        </nav>
     </header>
-
-    <main class="research-main">
-        <section class="research-hero" aria-labelledby="research-title">
-            <div>
-                <p class="research-kicker">PUBLICATIONS & RESEARCH INTERESTS</p>
-                <h1 id="research-title">Research by Area<span>.</span></h1>
-                <p class="research-intro">Explore my work across time series, AI4Science, AI safety, and agents.</p>
-                <div class="research-hero-links">
-                    <a href="https://scholar.google.com/citations?user=OL19JdwAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar <span aria-hidden="true">↗</span></a>
-                    <a href="../index.html#publications">Selected publications <span aria-hidden="true">→</span></a>
-                </div>
-            </div>
-            <div class="research-profile">
-                <img src="../assets/profile.png?v=e8d61a501277" alt="Kuiye Ding" width="96" height="96">
-                <div>
-                    <p class="research-profile-name">Kuiye Ding</p>
-                    <p>University of Technology Sydney</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="research-browser" aria-labelledby="research-browse-title">
-            <div class="research-browser-heading">
-                <h2 id="research-browse-title">Browse by area</h2>
-                <button class="research-all-button" type="button" data-filter="all" aria-pressed="true" aria-controls="research-content">All areas <span aria-hidden="true">↗</span></button>
-            </div>
-            <div id="research-area-filters" class="research-area-filters" role="group" aria-label="Research area filters"></div>
-        </section>
-
+    <main class="site-main">
+        <h1 class="page-title">Research</h1>
+        <p class="page-intro">My publications, grouped by topic. See also <a href="https://scholar.google.com/citations?user=OL19JdwAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>.</p>
+        <nav class="research-browser" aria-label="Filter publications by topic">
+            <button class="research-all-button" type="button" data-filter="all" aria-pressed="true" aria-controls="research-content">All</button>
+            <div id="research-area-filters" class="research-area-filters"></div>
+        </nav>
         <div class="research-results-heading">
-            <p id="research-results-summary" role="status" aria-live="polite">Loading research…</p>
-            <p>* denotes equal contribution (co-first authorship).</p>
+            <p id="research-results-summary" role="status" aria-live="polite">Loading publications…</p>
+            <p>* Equal contribution.</p>
         </div>
         <div id="research-content" aria-busy="true">
-            <noscript><p>Explore the full publication record on <a href="https://scholar.google.com/citations?user=OL19JdwAAAAJ&hl=en">Google Scholar</a>.</p></noscript>
+            <noscript><p>My publications are also listed on <a href="https://scholar.google.com/citations?user=OL19JdwAAAAJ&hl=en">Google Scholar</a>.</p></noscript>
         </div>
     </main>
-
-    <footer class="research-footer">
-        <div>
-            <p>© 2026 Kuiye Ding</p>
-            <a href="../index.html">Back to homepage <span aria-hidden="true">↗</span></a>
-        </div>
-    </footer>
+    <footer class="site-footer"><p>© 2026 Kuiye Ding. <a href="../index.html">Back to homepage</a>.</p></footer>
 </body>
 </html>

@@ -4,156 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Kuiye Ding, Ph.D. student at the University of Technology Sydney. Research in time series, AI4Science, AI safety, and agents.">
-    <title>Kuiye Ding - Academic Homepage</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="homepage.css?v=20261015-service">
-    <script src="script.js?v=20261015-neurips-2" defer></script>
+    <title>Kuiye Ding</title>
+    <link rel="stylesheet" href="homepage.css?v=20261015-academic">
+    <script src="script.js?v=20261015-academic" defer></script>
 </head>
 <body class="homepage">
-    <header class="top-nav site-header glass">
-        <div class="site-nav-inner">
-            <a class="site-brand" href="#homepage">Kuiye Ding<span aria-hidden="true">.</span></a>
-            <nav class="site-desktop-nav" aria-label="Main navigation">
-                <ul class="nav-links">
-                    <li><a href="#homepage">About</a></li>
-                    <li><a href="pages/research.html">Research</a></li>
-                    <li><a href="#latest-news">News</a></li>
-                    <li><a href="#publications">Publications</a></li>
-                    <li><a href="#services">Service</a></li>
-                    <li><a href="#educations">Background</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-            <button class="mobile-menu-btn site-menu-button" type="button" aria-label="Toggle navigation" aria-controls="mobile-menu" aria-expanded="false">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
-            </button>
-        </div>
-        <nav id="mobile-menu" class="site-mobile-menu hidden" aria-label="Mobile navigation">
-            <a href="#homepage">About</a>
+    <header class="top-nav site-header">
+        <nav class="site-navigation" aria-label="Main navigation">
+            <a href="#homepage">Home</a>
             <a href="pages/research.html">Research</a>
             <a href="#latest-news">News</a>
             <a href="#publications">Publications</a>
-            <a href="#services">Academic Service</a>
-            <a href="#educations">Background</a>
-            <a href="#contact">Contact</a>
+            <a href="#services">Service</a>
         </nav>
     </header>
     <main class="site-main">
-        <div class="site-grid">
-            <aside class="site-profile" aria-label="Profile">
-                <div class="profile-card">
-                    <img class="site-avatar" src="assets/profile.png?v=e8d61a501277" id="profile-img" alt="Kuiye Ding" width="180" height="180">
-                    <div class="site-identity">
-                        <p class="site-profile-kicker">PH.D. STUDENT</p>
-                        <h1>Kuiye Ding<span lang="zh-CN">丁奎业</span></h1>
-                        <p class="site-affiliation">University of Technology Sydney</p>
-                        <p class="site-location">Sydney, Australia</p>
-                    </div>
-                    <div class="site-social-links" aria-label="Profile links">
-                        <a href="mailto:kuiyeding@gmail.com">Email <span aria-hidden="true">↗</span></a>
-                        <a href="https://scholar.google.com/citations?user=OL19JdwAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Scholar <span aria-hidden="true">↗</span></a>
-                        <a href="https://github.com/Day333" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
-                    </div>
-                    <div class="profile-focus">
-                        <h2>Research Interests</h2>
-                        <ul><li>Time Series & Data Mining</li><li>AI4Science</li><li>AI Safety</li><li>Agent & AutoResearch</li></ul>
-                    </div>
-                    <blockquote class="site-motto">“The simplest explanation is usually the best one.”</blockquote>
-                </div>
-            </aside>
-            <div class="content-column">
-                <section id="homepage" class="home-panel home-introduction">
-                    <span id="about" class="section-anchor"></span>
-                    <p class="home-eyebrow">RESEARCH & ACADEMIC PROFILE</p>
-                    <h2>About Me</h2>
-                    <div class="home-biography">
-                        <p>I am a Ph.D. student at the <strong>University of Technology Sydney (UTS)</strong>, supervised by <a href="https://profiles.uts.edu.au/Hanchen.Wang" target="_blank" rel="noopener noreferrer">Dr. Hanchen Wang</a>.</p>
-                        <p>Previously, I worked as a Machine Learning Engineer at the <strong>Institute of Computing Technology, Chinese Academy of Sciences (ICT, CAS)</strong>. I received my B.S. degree in Cyberspace Security from the Faculty of Computer Science and Technology at Qilu University of Technology (Shandong Academy of Sciences).</p>
-                    </div>
-                    <div class="home-intro-links">
-                        <a href="pages/research.html">Explore my research <span aria-hidden="true">↗</span></a>
-                        <a href="mailto:kuiyeding@gmail.com">kuiyeding@gmail.com <span aria-hidden="true">↗</span></a>
-                    </div>
-                </section>
-                <section id="research-thrust" class="home-panel">
-                    <div class="home-section-header">
-                        <div><p class="home-eyebrow">FOCUS</p><h2>Research Areas</h2></div>
-                        <a class="home-section-link" href="pages/research.html">Browse all <span aria-hidden="true">↗</span></a>
-                    </div>
-                    <div class="home-research-areas">
-                        <a class="home-area" data-area="time-series" href="pages/research.html#time-series"><span class="home-area-number">01</span><h3>Time Series</h3><p>Forecasting & temporal learning</p><span class="home-area-arrow" aria-hidden="true">↗</span></a>
-                        <a class="home-area" data-area="ai4science" href="pages/research.html#ai4science"><span class="home-area-number">02</span><h3>AI4Science</h3><p>Scientific & engineering applications</p><span class="home-area-arrow" aria-hidden="true">↗</span></a>
-                        <a class="home-area" data-area="ai-safety" href="pages/research.html#ai-safety"><span class="home-area-number">03</span><h3>AI Safety</h3><p>Threat detection & secure systems</p><span class="home-area-arrow" aria-hidden="true">↗</span></a>
-                        <a class="home-area" data-area="agent" href="pages/research.html#agent"><span class="home-area-number">04</span><h3>Agent</h3><p>Automated research & self-evolution</p><span class="home-area-arrow" aria-hidden="true">↗</span></a>
-                    </div>
-                </section>
-                <section id="latest-news" class="home-panel">
-                    <div class="home-section-header">
-                        <div><p class="home-eyebrow">UPDATES</p><h2>News</h2></div>
-                        <a class="home-section-link" href="pages/all-news.html">View all <span aria-hidden="true">↗</span></a>
-                    </div>
-                    <div id="news-container" class="news-list"></div>
-                </section>
-                <section id="publications" class="home-panel">
-                    <div class="home-section-header">
-                        <div><p class="home-eyebrow">SELECTED WORK</p><h2>Publications</h2></div>
-                        <a class="home-section-link" href="pages/research.html">View by area <span aria-hidden="true">↗</span></a>
-                    </div>
-                    <p class="home-caption">* denotes equal contribution (co-first authorship).</p>
-                    <div class="publications-list"></div>
-                </section>
-                <section id="services" class="home-panel">
-                    <div class="home-section-header">
-                        <div><p class="home-eyebrow">COMMUNITY</p><h2>Academic Service</h2></div>
-                        <span class="home-section-label">Peer review</span>
-                    </div>
-                    <div class="service-grid">
-                        <div class="service-card">
-                            <h3>Conference Reviewer</h3>
-                            <div class="service-venues">
-                                <span>AAAI</span><span>IJCNN</span>
-                                <a href="https://www.sigweb.org/wsdm/" target="_blank" rel="noopener noreferrer" title="ACM International Conference on Web Search and Data Mining">ACM WSDM</a>
-                                <a href="https://www.ieeesmc2026.org/" target="_blank" rel="noopener noreferrer" title="IEEE International Conference on Systems, Man, and Cybernetics">IEEE SMC 2026</a>
-                            </div>
-                        </div>
-                        <div class="service-card"><h3>Journal Reviewer</h3><p>IEEE Transactions on Dependable and Secure Computing <strong>(TDSC)</strong></p></div>
-                    </div>
-                    <details id="reviewer-certificate" class="service-certificate">
-                        <summary>
-                            <span class="certificate-summary-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M6 3h12v12H6zM9 7h6M9 10h6"/><circle cx="12" cy="16" r="3"/><path d="M10 18l-1 4 3-1 3 1-1-4"/></svg></span>
-                            <span class="certificate-summary-text"><strong>Reviewer Certificate</strong><span>IEEE SMC 2026 · Certificate of Appreciation</span></span>
-                            <span class="certificate-summary-action">View certificate <span class="certificate-chevron" aria-hidden="true">⌄</span></span>
-                        </summary>
-                        <div class="certificate-content">
-                            <figure>
-                                <img src="assets/certificates/ieee-smc-2026-reviewer.png" alt="IEEE SMC 2026 Certificate of Appreciation presented to Kuiye Ding for service as a reviewer" width="1440" height="810" loading="lazy">
-                                <figcaption>IEEE International Conference on Systems, Man, and Cybernetics · Bellevue, USA · October 4–7, 2026</figcaption>
-                            </figure>
-                            <a class="certificate-pdf-link" href="assets/certificates/ieee-smc-2026-reviewer.pdf" target="_blank" rel="noopener noreferrer">Open original PDF <span aria-hidden="true">↗</span></a>
-                        </div>
-                    </details>
-                </section>
-                <section id="educations" class="home-panel">
-                    <div class="home-section-header"><div><p class="home-eyebrow">BACKGROUND</p><h2>Education</h2></div></div>
-                    <div class="background-list">
-                        <article class="background-entry"><p class="background-date">2026 – Present</p><div><h3>Ph.D. in Computer Science</h3><p class="background-institution">University of Technology Sydney</p><p>Supervised by Dr. Hanchen Wang. Research on time series data compression and LLMs.</p></div></article>
-                        <article class="background-entry"><p class="background-date">2021 – 2025</p><div><h3>B.S. in Cybersecurity</h3><p class="background-institution">Qilu University of Technology (Shandong Academy of Sciences)</p><p>Faculty of Computer Science and Technology</p></div></article>
-                    </div>
-                </section>
-                <section id="experiences" class="home-panel">
-                    <div class="home-section-header"><div><p class="home-eyebrow">BACKGROUND</p><h2>Research Experience</h2></div></div>
-                    <div class="background-list">
-                        <article class="background-entry"><p class="background-date">Oct 2024 – Dec 2025</p><div><h3>Visiting Student · Machine Learning Engineer</h3><p class="background-institution">Institute of Computing Technology, Chinese Academy of Sciences</p><p>Supervised by <strong>Jianfeng Zhan</strong> and <strong>Fanda Fan</strong>.</p></div></article>
-                        <article class="background-entry"><p class="background-date">Oct 2023 – Sep 2024</p><div><h3>Research Intern</h3><p class="background-institution">China University of Petroleum (East China)</p><p>Supervised by Assistant Professor <strong>Xin Yang</strong>.</p></div></article>
-                    </div>
-                </section>
-                <section id="contact" class="home-panel home-contact">
-                    <div><p class="home-eyebrow">CONTACT</p><h2>Get in touch</h2><p>For research collaborations and academic discussions.</p></div>
-                    <a href="mailto:kuiyeding@gmail.com">kuiyeding@gmail.com <span aria-hidden="true">↗</span></a>
-                </section>
+        <section id="homepage" class="introduction" aria-labelledby="name">
+            <div class="biography">
+                <h1 id="name">Kuiye Ding <span lang="zh-CN">丁奎业</span></h1>
+                <p>I am a Ph.D. student at the <a href="https://www.uts.edu.au/">University of Technology Sydney</a>, supervised by <a href="https://profiles.uts.edu.au/Hanchen.Wang">Dr. Hanchen Wang</a>.</p>
+                <p>Previously, I worked as a Machine Learning Engineer at the Institute of Computing Technology, Chinese Academy of Sciences. I received my B.S. in Cyberspace Security from Qilu University of Technology (Shandong Academy of Sciences).</p>
+                <p>My research interests include <a href="pages/research.html#time-series">time series</a>, <a href="pages/research.html#ai4science">AI4Science</a>, <a href="pages/research.html#ai-safety">AI safety</a>, and <a href="pages/research.html#agent">agents</a>.</p>
+                <p id="contact" class="profile-links"><a href="mailto:kuiyeding@gmail.com">Email</a><span>/</span><a href="https://scholar.google.com/citations?user=OL19JdwAAAAJ&hl=en">Google Scholar</a><span>/</span><a href="https://github.com/Day333">GitHub</a></p>
             </div>
-        </div>
+            <img class="site-avatar" src="assets/profile.png?v=e8d61a501277" id="profile-img" alt="Kuiye Ding's avatar, overlooking Sydney Harbour" width="210" height="210">
+        </section>
+
+        <section id="latest-news">
+            <div class="section-heading"><h2>News</h2><a href="pages/all-news.html">All news</a></div>
+            <div id="news-container" class="news-list"></div>
+        </section>
+
+        <section id="publications">
+            <div class="section-heading"><h2>Selected Publications</h2><a href="pages/research.html">All publications by topic</a></div>
+            <p class="section-note">* Equal contribution.</p>
+            <div class="publications-list"></div>
+        </section>
+
+        <section id="services">
+            <h2>Academic Service</h2>
+            <p><strong>Conference reviewer:</strong> AAAI, IJCNN, <a href="https://www.sigweb.org/wsdm/">ACM WSDM</a>, <a href="https://www.ieeesmc2026.org/">IEEE SMC 2026</a>.</p>
+            <p><strong>Journal reviewer:</strong> IEEE Transactions on Dependable and Secure Computing (TDSC).</p>
+            <details id="reviewer-certificate" class="service-certificate">
+                <summary>IEEE SMC 2026 reviewer certificate</summary>
+                <div class="certificate-content">
+                    <figure>
+                        <img src="assets/certificates/ieee-smc-2026-reviewer.png" alt="IEEE SMC 2026 Certificate of Appreciation for Kuiye Ding's service as a reviewer" width="1440" height="810" loading="lazy">
+                        <figcaption>IEEE SMC 2026, Bellevue, USA, October 4–7, 2026.</figcaption>
+                    </figure>
+                    <a href="assets/certificates/ieee-smc-2026-reviewer.pdf" target="_blank" rel="noopener noreferrer">Original PDF</a>
+                </div>
+            </details>
+        </section>
+
+        <section id="educations">
+            <h2>Education</h2>
+            <div class="background-list">
+                <article class="background-entry"><p class="background-date">2026 – Present</p><div><h3>University of Technology Sydney</h3><p>Ph.D. in Computer Science. Advisor: Dr. Hanchen Wang.</p></div></article>
+                <article class="background-entry"><p class="background-date">2021 – 2025</p><div><h3>Qilu University of Technology</h3><p>B.S. in Cyberspace Security, Faculty of Computer Science and Technology.</p></div></article>
+            </div>
+        </section>
+
+        <section id="experiences">
+            <h2>Research Experience</h2>
+            <div class="background-list">
+                <article class="background-entry"><p class="background-date">Oct 2024 – Dec 2025</p><div><h3>Institute of Computing Technology, Chinese Academy of Sciences</h3><p>Visiting Student / Machine Learning Engineer.<br>Supervised by Jianfeng Zhan and Fanda Fan.</p></div></article>
+                <article class="background-entry"><p class="background-date">Oct 2023 – Sep 2024</p><div><h3>China University of Petroleum (East China)</h3><p>Research Intern. Supervised by Assistant Professor Xin Yang.</p></div></article>
+            </div>
+        </section>
     </main>
-    <footer class="site-footer"><p>© 2026 Kuiye Ding. All rights reserved.</p><p>Adapted from AcaNova-X Template.</p></footer>
+    <footer class="site-footer"><p>© 2026 Kuiye Ding. <a href="https://github.com/Day333/homepage">Website source</a>.</p><p class="template-credit">Originally based on AcaNova-X Template.</p></footer>
 </body>
 </html>
