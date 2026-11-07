@@ -54,11 +54,13 @@ section[id] { scroll-margin-top: 24px; }
 .pub-thumbnail-box { margin-top: 14px; }
 .pub-thumbnail-box img { display: block; width: auto; max-width: 100%; max-height: 480px; object-fit: contain; }
 .service-certificate { font-size: 14px; margin-top: 14px; }
-.service-certificate summary { color: #1769aa; cursor: pointer; width: fit-content; }
-.certificate-content { padding-top: 16px; }
-.certificate-content figure { margin: 0 0 8px; }
-.certificate-content img { display: block; width: 100%; height: auto; border: 1px solid #eee; }
-.certificate-content figcaption { font-size: 12px; color: #666; margin-top: 6px; }
+.certificate-gallery { display: grid; gap: 32px; margin-top: 28px; }
+.certificate-entry { border-top: 1px solid #e8e8e8; padding-top: 24px; }
+.certificate-entry h2 { font-size: 20px; margin-bottom: 8px; }
+.certificate-meta { color: #666; font-size: 13px; margin-bottom: 16px; }
+.certificate-figure { margin: 0; }
+.certificate-figure img { display: block; width: 100%; height: auto; border: 1px solid #eee; }
+.certificate-figure figcaption { font-size: 13px; margin-top: 10px; }
 .background-list { display: grid; gap: 18px; }
 .background-entry { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 18px; }
 .background-entry h3, .background-entry p { margin-bottom: 3px; }
