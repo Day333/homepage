@@ -7,7 +7,10 @@
     "venue": "Conference on Neural Information Processing Systems (NeurIPS)",
     "year": "2026",
     "highlight": "CCF-A · Core A*",
-    "tags": []
+    "tags": [
+      { "text": "Paper", "link": "https://neurips.cc/virtual/2026/loc/sydney/poster/149231" },
+      { "text": "Code", "link": "https://github.com/BenchCouncil/MSAR" }
+    ]
   },
   {
     "id": "cvloss",
@@ -32,7 +35,9 @@
     "year": "2026",
     "highlight": "CCF-B · Core B * Equal contribution",
     "thumbnail": "assets/DIstilTS.jpg",
-    "tags": []
+    "tags": [
+      { "text": "Paper", "link": "https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=11460474" }
+    ]
   },
   {
     "id": "timemosaic",

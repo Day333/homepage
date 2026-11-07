@@ -10,12 +10,16 @@
   {
     "date": "2026-04-23",
     "content": "Our paper on threat-driven VM allocation was accepted to IEEE Transactions on Information Forensics & Security (TIFS).",
-    "links": []
+    "links": [
+      { "text": "Paper", "url": "https://ieeexplore.ieee.org/abstract/document/11503469/" }
+    ]
   },
   {
     "date": "2026-01-18",
     "content": "\"Distilling Time Series Foundation Models for Efficient Forecasting\" was accepted to ICASSP 2026.",
-    "links": []
+    "links": [
+      { "text": "Paper", "url": "https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=11460474" }
+    ]
   },
   {
     "date": "2026-01-18",

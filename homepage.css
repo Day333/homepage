@@ -67,6 +67,13 @@ section[id] { scroll-margin-top: 24px; }
 .site-footer { margin-top: 48px; padding: 18px 0 24px; border-top: 1px solid #e8e8e8; color: #777; font-size: 12px; }
 .site-footer p { margin-bottom: 4px; }
 .template-credit { font-size: 11px; color: #888; }
+.homepage-footer { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px 40px; }
+.footer-info { flex: 1 1 220px; }
+.visitor-map { width: 250px; max-width: 100%; text-align: center; }
+.visitor-map h2 { margin-bottom: 10px; color: #555; font-size: 13px; font-weight: 400; }
+.visitor-map-widget { min-height: 125px; }
+.visitor-map-widget > span { position: relative; display: block !important; margin: 0 !important; text-align: left; }
+.visitor-map-credit { margin-top: 8px; font-size: 11px; }
 .page-title { font-size: 28px; margin-bottom: 12px; }
 .page-intro { color: #555; }
 .back-link { display: inline-block; margin-top: 30px; }
@@ -89,5 +96,7 @@ section[id] { scroll-margin-top: 24px; }
     .news-date { font-size: 12px; }
     .section-heading > a { font-size: 12px; }
     .background-entry { grid-template-columns: 1fr; gap: 2px; }
+    .homepage-footer { flex-direction: column-reverse; align-items: center; text-align: center; }
+    .footer-info { flex: 0 1 auto; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
